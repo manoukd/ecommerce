@@ -99,6 +99,7 @@ body
         position: sticky;
         top: 0;
         left: 0;   
+        z-index: 1000000000;
     }
 
     #header a .logo
@@ -515,18 +516,17 @@ body
     footer
     {
         display: flex;
-        flex-direction: column;
-        
-        
+        flex-direction: column;      
     }
+
     footer .b1
     {
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        
+        align-items: center;  
         flex-wrap: wrap;
     }
+
     footer .col
     {
         display: flex;
@@ -535,14 +535,17 @@ body
         margin-bottom: 20px;
         margin-top: 0;
     }
+
     footer .col .follow
     {
         padding: 20px;
     }
+
     footer .col .install
     {
         
     }
+
     footer .row
     {
         display: flex;
@@ -626,15 +629,17 @@ body
 /* single product */
 #prodetails
 {
-    padding: 40px 80px;
+    
     display: flex;
     margin-top: 20px;
+    padding: 10vh 5vw;
 } 
 #prodetails .single-pro-image
 {
     width: 40%;
     margin-right: 50px;
-    padding: 40px 80px;
+  
+
 }
 #prodetails .single-pro-image img
 {
@@ -654,7 +659,7 @@ body
 #prodetails .single-pro-details
 {
     width: 50%;
-    padding-top: 50px;
+  
 }
 #prodetails .single-pro-details h4
 {
@@ -687,11 +692,244 @@ body
     color: #fff;
     background-color: rgb(82, 10, 10);
 }
+#prodetails .single-pro-details apan
+{
+    font-size: 26px;
 
+}
 /* Blog Page */
+#page-header.blog-header
+{
 
+    background-image: url("images/banner/online.jpeg");
+}
+#blog
+{
+  padding: 150px 150px 0 150px;  
+}
+#blog .blog-box
+{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    padding-bottom: 90px;
+}
+#blog .blog-img
+{
+    width: 50%;
+    margin-right: 1vw;
+}
+#blog img
+{
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+#blog .blog-details
+{
+    width: 50%;
+}
+#blog .blog-details a
+{
+    font-size: 11px;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    position: relative;
+    transition: 0.3s;
+}
+#blog .blog-details a::after
+{
+    content: "";
+    width: 50px;
+    height: 1px;
+    background: #000;
+    position: absolute;
+    top: 4px;
+    right: -60px;
+}
+
+#blog .blog-details a:hover
+{
+    color: rgb(140, 13, 13);
+}
+#blog .blog-details a:hover::after
+{
+    background-color: rgb(140, 13, 13);
+}
+#blog .blog-box h1 
+{
+    position: absolute;
+    top: -50px;
+    left: 0;
+    font-size: 70px;
+    color: #c9cbce;
+    z-index: -9;
+}
 
 /* About Page */
+#page-header.about-header
+{    
+    background-image: url("images/banner/bandeau-whatsapp-image-2020-12-10-at-18.11.16-336.jpeg");
+}
+#about-head
+{
+    display: flex;
+    align-items: center;
+}
+#about-head img
+{
+    width: 50%;
+    height: auto;
+}
+#about-head div
+{
+    width: 50%;
+}
+#about-app
+{
+    text-align: center;
+
+}
+#about-app .video
+{
+    width: 70%;
+    height: 100%;
+    margin: 30px auto;
+    
+}
+#about-app .video video
+{
+    width: 100%;
+    border-radius: 30px;
+}
+/* Contact Page */
+
+/* Cart page */
+#cart
+{
+    overflow: auto;
+}
+#cart table
+{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+#cart table img
+{
+    width: 70px;
+}
+
+#cart table td:nth-child(1)
+{
+    width: 100px;
+    text-align: center;
+}
+#cart table td:nth-child(2)
+{
+    width: 150px;
+    text-align: center;
+}
+#cart table td:nth-child(3)
+{
+    width: 250px;
+    text-align: center;
+}
+#cart table td:nth-child(4),
+#cart table td:nth-child(5),
+#cart table td:nth-child(6)
+{
+    width: 150px;
+    text-align: center;
+}
+#cart table td:nth-child(5) input
+{
+    width: 70px;
+    padding: 10px 5px 10px 5px;
+}
+#cart table thead
+{
+    border: 1px solid #c9cbce;
+    border-right: none;
+    border-left: none;  
+}
+#cart table thead td
+{
+    font-weight: 700px;
+    text-transform: uppercase;
+    font-size: 13px  ;
+    padding: 18px 0;
+}
+
+#cart table tbody tr td
+{
+    padding-top: 15px;
+}
+#cart table tbody td
+{
+    font-size: 13px;
+}
+
+#cart-add 
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#coupon
+{
+    width: 50%;
+    margin-bottom: 30px;
+}
+#coupon h3,
+#subtotal h3
+{
+    padding-bottom: 15px;
+}
+#coupon input
+{
+    outline: none;
+    padding: 10px 20px;
+    width: 60%;
+    margin-right: 10px;
+    border: 1px solid #c9cbce;
+}
+#coupon button,
+#subtotal button
+{
+    background-color: rgb(140, 13, 13);
+    color: #fff;
+    padding: 12px 20px;
+}
+
+#subtotal
+{
+    width: 50%;
+    margin-bottom: 30px;
+    border: 1px solid #c9cbce;
+    padding: 30px;
+}
+#subtotal table
+{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+#subtotal table td
+{
+    width: 50%;
+    padding: 10px;
+    font-size: 13px;
+    border: 1px solid #c9cbce;
+}
+
+
+/*  */
+
 
 
 
@@ -732,7 +970,7 @@ body
         display: flex;
         align-items: center;
     }
-    #mobile img
+    #mobile i
     {
        font-size: 20px;
        padding-left: 20px;
@@ -756,9 +994,9 @@ body
     }
     #feature
     {
-        
+        flex-direction: column;
         justify-content: center;
-       
+        align-content: center;
     }
     #feature .fe-box
     {
@@ -884,5 +1122,78 @@ body
     footer .copyright {
     
         text-align: start;
+    }
+
+    /* single product */
+    #prodetails {
+        display: flex;
+       flex-direction: column;
+       width: 100%;
+    }
+    #prodetails .single-pro-image {
+        width: 100%;
+        
+    }
+    #prodetails .single-pro-details {
+        width: 100%;
+    }
+    
+    /*  */
+
+    #blog
+    {
+    padding: 30px 30px 0 30px;  
+    margin-top: 20px;
+    }
+    #blog .blog-box
+    {
+        display: flex;
+        flex-direction: column;
+                
+    }
+    #blog .blog-img
+    {
+        width: 100%;
+        margin-right: 1vw;
+    }
+    #blog img
+    {
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
+    }
+    #blog .blog-details
+    {
+        width: 80%;
+    }
+   /* about page */
+ 
+   #about-head {
+	display: flex;
+    flex-direction: column;
+	
+    }
+    #about-head img {
+        width: 70%;
+        height: auto;
+    }
+    #about-head div {
+        width: 70%;
+    }
+
+    /* Cart page */
+    #cart-add 
+    {
+       align-items: center;
+        flex-direction: column;
+    }
+    #coupon
+    {
+        width:80%;
+        
+    }
+    #subtotal
+    {
+        width: 80%;
     }
 }
